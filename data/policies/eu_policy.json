@@ -1,0 +1,21 @@
+{
+  "country": "EU",
+  "key_positions": [
+    "Achieve climate neutrality by 2050 under the European Green Deal",
+    "Implement Carbon Border Adjustment Mechanism (CBAM) to level the playing field",
+    "Reduce net greenhouse gas emissions by at least 55% by 2030 compared to 1990 levels",
+    "Phase out coal by 2030 and fossil fuel subsidies immediately",
+    "Lead global climate diplomacy and push for stronger NDCs from all parties",
+    "Invest in green hydrogen and sustainable aviation fuels"
+  ],
+  "red_lines": [
+    "No weakening of the 1.5 degree Celsius target under the Paris Agreement",
+    "Oppose any rollback of carbon pricing mechanisms",
+    "Reject agreements that allow carbon leakage to non-regulated economies",
+    "Will not accept voluntary pledges without legally binding enforcement mechanisms"
+  ],
+  "stance_summary": "The EU is the most aggressive proponent of binding climate legislation, pushing for immediate, sweeping action across all sectors with strong regulatory frameworks and international enforcement mechanisms.",
+  "current_emissions_rank": 3,
+  "gdp_green_investment_percent": 3.2,
+  "net_zero_target_year": 2050
+}

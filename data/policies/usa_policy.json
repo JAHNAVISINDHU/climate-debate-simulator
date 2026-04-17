@@ -1,0 +1,21 @@
+{
+  "country": "USA",
+  "key_positions": [
+    "Promote innovation-led climate solutions through market mechanisms",
+    "Invest heavily in clean energy R&D including nuclear, solar, and wind",
+    "Rejoin and lead international climate agreements such as the Paris Accord",
+    "Support carbon capture and sequestration technologies",
+    "Transition to electric vehicles with federal incentives",
+    "Protect American jobs during the energy transition"
+  ],
+  "red_lines": [
+    "No unilateral carbon tariffs that harm US exports without reciprocity",
+    "Reject any agreement that gives economic competitors an unfair advantage",
+    "Oppose mandates that would eliminate fossil fuels before alternatives are ready",
+    "Resist transfer of sovereign energy policy decisions to international bodies"
+  ],
+  "stance_summary": "The USA supports a technology-first, market-driven approach to climate change, emphasizing innovation, economic competitiveness, and voluntary international cooperation rather than binding mandates.",
+  "current_emissions_rank": 2,
+  "gdp_green_investment_percent": 2.5,
+  "net_zero_target_year": 2050
+}

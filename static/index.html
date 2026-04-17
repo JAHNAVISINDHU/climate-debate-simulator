@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Climate Policy Debate Simulator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <div class="bg-glow"></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo-mark">⟁</div>
+      <h1 class="site-title">Climate Debate <span>Simulator</span></h1>
+      <div class="status-indicator" id="statusDot">
+        <span class="dot"></span>
+        <span class="status-label">API Ready</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-layout">
+
+    <!-- LEFT PANEL: Controls -->
+    <aside class="panel panel-controls">
+      <div class="panel-header">
+        <span class="panel-tag">CONFIG</span>
+        <h2>Debate Setup</h2>
+      </div>
+
+      <div class="form-group">
+        <label for="topicInput">Debate Topic</label>
+        <textarea id="topicInput" rows="3" placeholder="e.g. Carbon tariffs on developing nations should be abolished immediately"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="roundsInput">Rounds <span class="range-val" id="roundsVal">2</span></label>
+        <input type="range" id="roundsInput" min="1" max="5" value="2" />
+        <div class="range-labels"><span>1</span><span>5</span></div>
+      </div>
+
+      <div class="agents-preview">
+        <div class="agent-chip usa">🇺🇸 USA</div>
+        <div class="arrow">→</div>
+        <div class="agent-chip eu">🇪🇺 EU</div>
+        <div class="arrow">→</div>
+        <div class="agent-chip china">🇨🇳 China</div>
+      </div>
+
+      <button class="btn-start" id="startBtn" onclick="startDebate()">
+        <span class="btn-text">Launch Debate</span>
+        <span class="btn-icon">▶</span>
+      </button>
+
+      <div class="quick-topics">
+        <p class="qt-label">Quick Topics</p>
+        <button class="qt-btn" onclick="setTopic('Carbon border adjustment mechanisms and their impact on global trade')">Carbon Tariffs</button>
+        <button class="qt-btn" onclick="setTopic('Developed nations must pay $1 trillion annually in climate finance to developing countries')">Climate Finance</button>
+        <button class="qt-btn" onclick="setTopic('All coal power plants must be shut down globally by 2030')">Coal Phase-Out</button>
+        <button class="qt-btn" onclick="setTopic('Nuclear energy should be classified as green energy in all international frameworks')">Nuclear Energy</button>
+      </div>
+
+      <!-- Policy Viewer -->
+      <div class="policy-section">
+        <p class="qt-label">View Policy Docs</p>
+        <div class="policy-btns">
+          <button class="policy-btn" onclick="viewPolicy('usa')">🇺🇸 USA</button>
+          <button class="policy-btn" onclick="viewPolicy('eu')">🇪🇺 EU</button>
+          <button class="policy-btn" onclick="viewPolicy('china')">🇨🇳 China</button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- RIGHT PANEL: Debate Transcript -->
+    <section class="panel panel-debate">
+      <div class="panel-header">
+        <span class="panel-tag">LIVE</span>
+        <h2>Debate Transcript</h2>
+        <div class="debate-meta" id="debateMeta"></div>
+      </div>
+
+      <div class="transcript-area" id="transcriptArea">
+        <div class="empty-state">
+          <div class="empty-icon">⟁</div>
+          <p>Configure a topic and launch the debate to begin the simulation.</p>
+          <p class="empty-sub">Three AI agents — USA, EU, and China — will argue their positions based on real policy documents.</p>
+        </div>
+      </div>
+
+      <div class="progress-bar-wrap" id="progressWrap" style="display:none">
+        <div class="progress-bar" id="progressBar"></div>
+        <span class="progress-label" id="progressLabel">Initializing...</span>
+      </div>
+    </section>
+  </main>
+
+  <!-- Policy Modal -->
+  <div class="modal-overlay" id="policyModal" onclick="closeModal()">
+    <div class="modal-box" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-content" id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
